@@ -1,21 +1,23 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from .models import BlogPost
 
 # Create your views here.
-def home(request):
-    return render(request, "home.html")
-
-def blogpost(request):
-    return render(request, "blogpost.html")
 
 def blog_index(request):
-    blog_posts = BlogPost.objects.all()
-    return render(request, "blog_index.html", {"blog_posts": blog_posts})
+    posts = BlogPost.objects.all()
+    return render(request, "blog_index.html", {"posts": posts})
 
 def blog_create(request):
     if request.method == "POST":
         title = request.POST.get("title")
         content = request.POST.get("content")
-        BlogPost.objects.create(title=title, content=content)
-        return HttpResponse("Blog post created")
+        post = BlogPost(title=title, content=content)
+        post.save()
+        return redirect("blog_index")
     return render(request, "blog_create.html")
+
+def home(request):
+    return render(request, "home.html")
+
+def blogpost(request):
+    return render(request, "blogpost.html")
