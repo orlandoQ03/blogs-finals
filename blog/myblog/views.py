@@ -12,8 +12,12 @@ def blog_create(request):
         title = request.POST.get("title")
         content = request.POST.get("content")
         post = BlogPost(title=title, content=content)
-        post.save()
-        return redirect("blog_index")
+
+        # save if text is not blank.
+        if (title != "" and content != ""):
+            post.save()
+            return redirect("blog_index")
+
     return render(request, "blog_create.html")
 
 def home(request):
