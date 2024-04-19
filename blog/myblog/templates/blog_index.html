@@ -2,19 +2,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Blog Index</title>
+    <title>Blog Index - Home</title>
     <link rel="stylesheet" href="{% static 'myblog/css/style.css' %}"/>
 </head>
 <body>
-    <h1 class="main-header">Blog Index</h1>
-    <a href="{% url 'blog_create' %}">Create a new post</a>
+    <h1 class="main-header">The Blog Index</h1>
 
-    <!-- Show all posts -->
-    {% for post in posts %}
-        <div class="post">
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.content }}</p>
+    <div class="main-body">
+
+        <!-- Navigation Sidebar -->
+        <div class="left-sidebar">
+            <nav class="main-nav">
+                <a href="{% url 'blog_index' %}">Home</a>
+                <a href="{% url 'blog_create' %}">Post</a>
+            </nav>
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">Django</a></li>
+                <li><a href="#">Flask</a></li>
+                <li><a href="#">Web Development</a></li>
+            </ul>
         </div>
-    {% endfor %}
+
+        <!-- Main content -->
+        <div class="main-content">
+        {% for post in posts %}
+            <div class="post">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content }}</p>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
 </body>
 </html>

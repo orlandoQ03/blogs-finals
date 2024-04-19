@@ -1,3 +1,48 @@
+body{
+    front-family: 'Arial', sans-serif;
+    background-color: ffffff;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
 .main-header {
-    background-color: red;
+    background-color: rgb(249, 180, 19);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 0%;   
+}
+
+.main-body {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-sidebar {
+    background-color: rgb(255, 222, 150);
+    color: black;
+    padding: 10px;
+    width: 20%;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.main-content {
+    color: rgb(0, 0, 0);
+    margin-left: 30%;
+    margin-top: 5%;
+    padding: 10px;
+    width: 60%;
+    overflow-x: auto;
+}
+
+.post {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 20px;
 }
