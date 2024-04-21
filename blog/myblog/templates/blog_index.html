@@ -16,13 +16,13 @@
                 <a href="{% url 'blog_index' %}">Home</a>
                 <a href="{% url 'blog_create' %}">Post</a>
             </nav>
-            <h2>Categories</h2>
-            <ul>
-                <li><a href="#">Python</a></li>
-                <li><a href="#">Django</a></li>
-                <li><a href="#">Flask</a></li>
-                <li><a href="#">Web Development</a></li>
-            </ul>
+            <h2 class="main-catagories">Categories</h2>
+                <ul>
+                    <li><a href="#">Django</a></li>
+                    <li><a href="#">Flask</a></li>
+                    <li><a href="#">Web Development</a></li>
+                </ul>
+            </nav>
         </div>
 
         <!-- Main content -->
@@ -30,7 +30,9 @@
         {% for post in posts %}
             <div class="post">
                 <h2>{{ post.title }}</h2>
+                <h4>Posted on {{ post.date }}</h4>
                 <p>{{ post.content }}</p>
+                <a href="{% url 'blog_delete' post.id %}">Delete Post</a>
             </div>
         {% endfor %}
         </div>

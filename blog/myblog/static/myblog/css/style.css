@@ -1,5 +1,5 @@
 body{
-    front-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: ffffff;
     margin: auto;
     display: flex;
@@ -12,6 +12,10 @@ body{
     padding: 10px;
     text-align: center;
     margin: 0%;   
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 .main-body {
@@ -20,22 +24,42 @@ body{
 }
 
 .left-sidebar {
-    background-color: rgb(255, 222, 150);
+    background-color: rgb(255, 231, 188);
     color: black;
     padding: 10px;
-    width: 20%;
-    position: fixed;
+    width: 200px;
     height: 100vh;
+    position: fixed;
     overflow-y: auto;
+    border-right: 2px solid rgb(140, 87, 35, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.main-nav {
+    color: white;
+    padding: 10px;
+    margin-top: calc(40px + 10%);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-catagories {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .main-content {
     color: rgb(0, 0, 0);
-    margin-left: 30%;
-    margin-top: 5%;
+    margin-left: calc(200px + 10%);
+    margin-right: 10%;
+    margin-top: 10%;
     padding: 10px;
     width: 60%;
     overflow-x: auto;
+    width: calc(100% - 200px);
 }
 
 .post {
@@ -45,4 +69,5 @@ body{
     margin: 10px;
     border: 1px solid rgb(0, 0, 0);
     margin-bottom: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
