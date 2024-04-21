@@ -4,7 +4,7 @@
 This is a blogging site that would allow the author to grow his brand. End-users would also be able to interact with the content uploaded and share them with other peers across the internet.
 
 ## - Overview -
-This is a simple website consisting of blog posts listed on the user's feed. Users are able to read, write and edit their 
+This is a simple website consisting of blog posts listed on the user's feed. Users are able to read, write and edit their posts.
 
 ## - Back-End -
 This website utlizies Django to process HTTP requests, and SQlite database as its back-end solution.
