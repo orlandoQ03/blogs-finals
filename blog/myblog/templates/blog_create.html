@@ -1,10 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Create Blog Post</title>
+    <link rel="stylesheet" href="{% static 'myblog/css/style.css' %}"/>
 </head>
 <body>
-    <h1>Create a new blog post</h1>
+    <h1 class="main-header">The Blog Index</h1>
+    <h1 id="prompt">Create a new blog post</h1>
 
     <!-- Display messages -->
     {% if messages %}
@@ -15,16 +18,18 @@
     </div>
     {% endif %}
 
-    <form method="POST">
-        {% csrf_token %}
-        <label for="title">Title:</label><br>
-        <input type="text" id="title" name="title"><br>
-        <label for="content">Content:</label><br>
-        <textarea id="content" name="content"></textarea><br>
-        <input type="submit" value="Submit">    
-    </form>
+    <div id="options">
+        <form id="form-field" method="POST">
+            {% csrf_token %}
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title"><br>
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content"></textarea><br>
+            <input type="submit" value="Submit">    
+        </form>
+        <!-- Return to page -->
+        <a href="{% url 'blog_index' %}">Return to blog index</a>
+    </div>
     
-    <!-- Return to page -->
-    <a href="{% url 'blog_index' %}">Return to blog index</a>
 </body>
 </html>

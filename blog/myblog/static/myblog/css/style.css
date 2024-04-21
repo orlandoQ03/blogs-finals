@@ -55,11 +55,10 @@ body{
     color: rgb(0, 0, 0);
     margin-left: calc(200px + 10%);
     margin-right: 10%;
-    margin-top: 10%;
+    margin-top: 60px;
     padding: 10px;
     width: 60%;
     overflow-x: auto;
-    width: calc(100% - 200px);
 }
 
 .post {
@@ -70,4 +69,54 @@ body{
     border: 1px solid rgb(0, 0, 0);
     margin-bottom: 20px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+#prompt {
+    margin-top: 70px;
+}
+
+#form {
+    margin-top: 20px;
+    background-color: rgb(255, 231, 188);
+    color: black;
+    border-radius: 0px;
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    width: max-content;
+}
+
+#post-preview .post {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#form-field {
+    margin-left: 25px;
+}
+
+#prompt {
+    margin-top: 70px;
+    margin-left: 25px;
+}
+
+#form-field label {
+    color: black;
+}
+
+.messages {
+    color: red;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Arial', sans-serif;
 }
