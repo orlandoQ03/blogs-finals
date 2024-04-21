@@ -9,16 +9,16 @@ This is a simple website consisting of blog posts listed on the user's feed. Use
 ## - Back-End -
 This website utlizies Django to process HTTP requests, and SQlite database as its back-end solution.
 
-#### Routes:
+#### - Routes -
 * `POST /blog_index`: Renders the main page.
 * `DELETE /delete/<int:id>/`: Delete posts to the user's discretion.
 
-### Database Schema
+### - Database Schema -
 - **Blog Posts**: Stores the user's blog content, which are displayed in the main oage.
 - **Blog Users**: Contains the users registered.
 - **Comments**: Stores comments left by users on blog posts.
 
-## How to open
+## - How to open -
 1. Clone repository to your local machine.
    `git clone https://github.com/orlandoQ03/blogs-finals.git`
 2. Locate the project directory
