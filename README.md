@@ -22,7 +22,7 @@ This website utlizies Django to process HTTP requests, and SQlite database as it
 1. Clone repository to your local machine.
    `git clone https://github.com/orlandoQ03/blogs-finals.git`
 2. Locate the project directory
-   _e.g._ `cd path/to/CSC321-final`
+   _e.g._ `cd blogs-finals`
 3. create virtual environment
    `python -m venv env`
 4. To activate the virtual environment, use:
