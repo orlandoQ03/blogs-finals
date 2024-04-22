@@ -23,16 +23,18 @@ This website utlizies Django to process HTTP requests, and SQlite database as it
    `git clone https://github.com/orlandoQ03/blogs-finals.git`
 2. Locate the project directory
    _e.g._ `cd blogs-finals`
-3. create virtual environment
+3. Install Django dependencies
+   `pip install Django`
+4. create virtual environment
    `python -m venv env`
-4. To activate the virtual environment, use:
+5. To activate the virtual environment, use:
 * On Windows:
   `env\Scripts\activate`
 * On Unix or MacOS:
   `source env/Scripts/activate`
-5. Change directory to _/blog_
+6. Change directory to _/blog_
   `cd blog`
-6. Run server
+7. Run server
   `python manage.py runserver`
-7. Access this URL to view website
+8. Access this URL to view website
   `http://127.0.0.1:8000/`
