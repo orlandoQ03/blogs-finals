@@ -29,7 +29,7 @@ This website utlizies Django to process HTTP requests, and SQlite database as it
 * On Windows:
   `env\Scripts\activate`
 * On Unix or MacOS:
-  `source env/bin/activate`
+  `source env/Scripts/activate`
 5. Change directory to _/blog_
   `cd blog`
 6. Run server
